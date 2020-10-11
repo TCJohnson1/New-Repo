@@ -106,3 +106,10 @@ p {
     border-radius: 50%;
 }
 
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}

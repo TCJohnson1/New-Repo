@@ -52,8 +52,10 @@ const slide = (color, column) => {
     for (let i = 0; i < 7; i++) {
         if (!$circle[i + column * 7].classList.contains('red') && !$circle[i + column * 7].classList.contains('black')) {
             setTimeout(() => {
-
-            $($circle[i + column * 7]).css('background-color', color).addClass(color)
+            if (i > 0){
+            $($circle[i + column * 7-1]).removeClass(color)
+            }
+            $($circle[i + column * 7]).addClass(color)
             toggle()
             }, 500);
         } else {
@@ -68,11 +70,11 @@ function toggle(){
     choice = choice ? false : true
 }
 function playMove(event) {
-    let $move = $(event.target)
+    let columnNumber = parseInt(event.target.id)
         if (choice === true) {
-            slide('black', 0)
+            slide('black', Math.floor(columnNumber/7)) 
         }   else {
-            slide('red', 0)
+            slide('red', Math.floor(columnNumber/7))
         }
         checkWinners();
         console.log($move.attr('id'))
