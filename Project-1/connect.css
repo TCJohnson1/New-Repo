@@ -100,3 +100,7 @@ p {
 .circle:hover {
     background-color: powderblue;
 }
+
+.circle {
+    cursor: grab;
+}

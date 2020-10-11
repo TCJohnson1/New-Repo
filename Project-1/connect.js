@@ -1,4 +1,6 @@
 $(() => {
+//Establishing variables
+
 //Accessing 'How To Play' button
 const $openBtn = $('#openWelcome');
 
@@ -9,7 +11,7 @@ const $welcome = $('#welcome');
 const $closeBtn = $('#close');
 
 //Accessing refresh button
-const $resetBtn = $('#reset');
+// const $resetBtn = $('#reset');
 
 //Accessing individual board pieces //=============> Play a piece no good <============\\
 const $circle = $('.circle');
@@ -24,18 +26,37 @@ const closeWelcome = () => {
     $welcome.css('display', 'none');
 }
 
-//Event handler for refresh button
-const refreshPage = () => {
-    $resetBtn.click(function(){
-        location.reload(true)
-    })
-}
+//Event handler for refresh button  //====> not needed with HTML reset button <====\\
+// const refreshPage = () => {
+//     $resetBtn.click(function(){
+//         location.reload(true)
+//     })
+// }
 
 // Function to click the board pieces //=============> Play a piece no good <============\\
+//Established a variable 'playMove' to play a move where clicked on the board
+$circle.on('click', playMove)
 // const $circle = document.querySelectorAll("div.class")
-const playMove = () => {
-    document.querySelectorAll($circle)
+// const playMove = () => {
+
+    // document.querySelectorAll($circle).addEventListener('click', function())
+// }
+
+let choice = true
+function toggle(){
+    choice = choice ? false : true
 }
+function playMove() {
+    let $move = $(event.target)
+        if (choice === true) {
+            $move.css('background-color', "black").removeClass('circle').addClass('played')
+            toggle()
+        }   else {
+            $move.css('background-color', "red").removeClass('circle').addClass('played')
+            toggle()
+        }
+}
+
 
 // Event listener for the 'How To Play' button
 $openBtn.on('click', openWlecome);  
@@ -46,7 +67,8 @@ $closeBtn.on('click', closeWelcome);
 //Event listener for playing an individual piece //==========> Play a piece no good <==========\\
 // $circle.on('click', playMove)
 
-$resetBtn.on('click', refreshPage)
+// $resetBtn.on('click', refreshPage)
+
 
 
 });
