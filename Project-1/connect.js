@@ -49,9 +49,15 @@ $circle.on('click', (e) => playMove(e))
 
 //IDS NEED TO BE RENAMED TO MATCH THE INDEX IN CIRCLES. SO RENUMBER BY COLUMN
 const slide = (color, column) => {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         if (!$circle[i + column * 7].classList.contains('red') && !$circle[i + column * 7].classList.contains('black')) {
-            
+            setTimeout(() => {
+
+            $($circle[i + column * 7]).css('background-color', color).addClass(color)
+            toggle()
+            }, 500);
+        } else {
+            return
         }
         
 
@@ -64,11 +70,9 @@ function toggle(){
 function playMove(event) {
     let $move = $(event.target)
         if (choice === true) {
-            $move.css('background-color', "black").removeClass('circle').addClass('played').addClass('black')
-            toggle()
+            slide('black', 0)
         }   else {
-            $move.css('background-color', "red").removeClass('circle').addClass('played').addClass('red')
-            toggle()
+            slide('red', 0)
         }
         checkWinners();
         console.log($move.attr('id'))
