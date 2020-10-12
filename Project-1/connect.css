@@ -28,7 +28,7 @@ p {
 }
 
 #welcome-text {
-    background-color: lightslategray;
+    background-color: gainsboro;
     height: 320px;
     width: 520px;
     border-radius: 4px;
@@ -65,7 +65,7 @@ p {
     border: solid 3px yellow;
     font-size: 35px;
     width: 65px;
-    height: 50px;
+    height: 65px;
     text-align: center;
     padding: 0%;
     line-height: 50px;
@@ -75,14 +75,18 @@ p {
 }
 
 .gameBoard {
+    border: solid 3px yellow;
+    border-radius: 5%;
+    background-color: yellow;
     display: flex;
     flex-wrap: wrap;
-    height: 325px;
-    width: 520px;
+    height: 450px;
+    width: 525px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+    justify-content: center;
 }
 
 .window-buttons {
