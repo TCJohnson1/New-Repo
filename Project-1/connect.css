@@ -111,9 +111,18 @@ p {
 }
 
 .black {
-    background-color: black;
+    background-color: black !important;
 }
 
 .red {
-    background-color: red;
+    background-color: red !important;
+}
+
+.topChip {
+    
+}
+
+@keyframes drop {
+    from{transform: translateX(0);}
+    to{transform: translateX(500px);}
 }
