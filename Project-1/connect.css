@@ -60,7 +60,7 @@ p {
     transform: translate(-50% , -50%);
 }
 
-.row>div {
+.column>div {
     margin: 1px;
     border: solid 3px yellow;
     font-size: 35px;
