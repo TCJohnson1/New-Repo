@@ -1,9 +1,10 @@
 $(() => {
 //Establishing variables
 
+//Accessing Game results
+const $resultsBox = $('#modal')
+const $results = $('#modal-text');
 
-//Establishing game board
-const $gameBoard = $('.gameBoard');
 
 //Accessing 'How To Play' button
 const $openBtn = $('#openWelcome');
@@ -28,6 +29,16 @@ const closeWelcome = () => {
     $welcome.css('display', 'none');
 }
 
+
+//Event handler for showing results
+const showResult = (message) => {
+    $results.text(message);
+    $resultsBox.css('display', 'flex')
+}
+
+
+//
+
 //Event handler for refresh button  //====> not needed with HTML reset button <====\\
 // const refreshPage = () => {
 //     $resetBtn.click(function(){
@@ -37,7 +48,9 @@ const closeWelcome = () => {
 
 // Function to click the board pieces //=============> Play a piece no good <============\\
 //Established a variable 'playMove' to play a move where clicked on the board
-$circle.on('click', (e) => playMove(e))
+$circle.on('click', (e) => {
+    playMove(e)
+})
 // const $circle = document.querySelectorAll("div.class")
 // const playMove = () => {
 
@@ -50,13 +63,11 @@ const slide = (color, column) => {
     console.log(color)
     for (let i = 0; i < 6; i++) {
         if (!$circle[i + column * 6].classList.contains('red') && !$circle[i + column * 6].classList.contains('black')) {
-            setTimeout(() => {
             if (i > 0){
             $($circle[i + column * 6-1]).removeClass(color)
             }
             $($circle[i + column * 6]).addClass(color)
             // toggle()
-            }, 500);
         } else {
             // return
         }
@@ -68,7 +79,7 @@ const slide = (color, column) => {
 let choice = true
 function toggle(){
     choice = choice ? false : true
-    console.log(choice)
+    
 }
 
 function playMove(event) {
@@ -78,7 +89,7 @@ function playMove(event) {
         }   else {
             slide('red', Math.floor(columnNumber/6))
         }
-        checkWinners();
+        setTimeout(checkWinners(), 1000);
         // console.log($move.attr('id'))
 }
 //Winning arrays need to be updated
@@ -95,7 +106,7 @@ function checkWinners() {
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
             showResult('Red wins!')
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
-            showResult('Black Wins!')
+            showResult('Black Wins!');
         }
     }
 // checkDraw()
@@ -113,10 +124,7 @@ const checkDraw = () => {
 
 
 // Show results in a modal
-const showResult = (message) => {
-    $('#modal-text').text(message);
-    $('modal').css('display', 'flex')
-}
+
 
 // Event listener for the 'How To Play' button
 $openBtn.on('click', openWlecome);  
@@ -127,11 +135,11 @@ $closeBtn.on('click', closeWelcome);
 /////////Need to be established for dropping top chip////////////////////
 /////////////////////////////////////////////////////////////////////////
 //Event listener for top chip hovering
-$chip.on('mouseover', )
+// $chip.on('mouseover', )
 
 
 //Event listener for top chip drop
-$chip.on('click', )
+// $chip.on('click', )
 /////////////////////////////////////////////////////////////////////////
 
 

@@ -123,13 +123,9 @@ p {
     
 }
 
-/* @keyframes drop {
-    from{transform: translateX(0);}
-    to{transform: translateX(500px);}
-} */
 
 #modal {
-    background-color: #dcdcdc;
+    background-color: #dcdcdc !important;
     position: fixed;
     left: 0;
     top: 0;
@@ -140,7 +136,7 @@ p {
 }
 
 #modal-text {
-    background-color: gainsboro;
+    background-color: gainsboro !important;
     opacity: 0.75;
     border-radius: 4px;
     padding: 25px 50px;
