@@ -123,3 +123,8 @@ $chip.on('click', )
 console.log($circle)
 
 });
+
+//Needs:
+// Find a way to show the current players turn
+//Establish a function for a tie
+//Lots of CSS
