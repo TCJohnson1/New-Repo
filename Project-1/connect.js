@@ -46,8 +46,8 @@ const showResult = (message) => {
 //     })
 // }
 
-// Function to click the board pieces //=============> Play a piece no good <============\\
-//Established a variable 'playMove' to play a move where clicked on the board
+
+//Established a variable 'playMove' to play a move where clicked on the board. Set PLay move as an event.
 $circle.on('click', (e) => {
     playMove(e)
 })
@@ -149,5 +149,4 @@ console.log($circle)
 
 //Needs:
 // Find a way to show the current players turn
-//Establish a function for a tie
-//Lots of CSS
+//Establish a function for a tie and game over
