@@ -5,6 +5,9 @@ $(() => {
 const $resultsBox = $('#modal')
 const $results = $('#modal-text');
 
+let gameInProgress = true
+
+let moveCounter = 0;
 
 //Accessing 'How To Play' button
 const $openBtn = $('#openWelcome');
@@ -61,6 +64,8 @@ $circle.on('click', (e) => {
 //IDS NEED TO BE RENAMED TO MATCH THE INDEX IN CIRCLES. SO RENUMBER BY COLUMN
 const slide = (color, column) => {
     console.log(color)
+    if (gameInProgress === true){
+        moveCounter++
     for (let i = 0; i < 6; i++) {
         if (!$circle[i + column * 6].classList.contains('red') && !$circle[i + column * 6].classList.contains('black')) {
             if (i > 0){
@@ -76,6 +81,8 @@ const slide = (color, column) => {
 }
     toggle()
 }
+}
+
 let choice = true
 function toggle(){
     choice = choice ? false : true
@@ -104,12 +111,15 @@ function checkWinners() {
         const check3 = $($circle[winningArrays[y][2]])
         const check4 = $($circle[winningArrays[y][3]])
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
+            gameInProgress = false
             showResult('Red wins!')
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
+            gameInProgress = false
             showResult('Black Wins!');
-        } else if (check1.hasClass('black') && !check2.hasClass('black') && !check3.hasClass('black') && !check4.hasClass('black') && check1.hasClass('red') && !check2.hasClass('red') && !check3.hasClass('red') && !check4.hasClass('red')) {
-            showResult(`It's a Draw!`);
+        } else if (moveCounter === 42){
+            showResult(`It's a Tie!`);
         }
+        // }
         
     }
 // checkDraw()
