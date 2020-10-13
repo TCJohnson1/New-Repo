@@ -14,8 +14,6 @@ const $welcome = $('#welcome');
 //Accessing the close button of pop up
 const $closeBtn = $('#close');
 
-//Accessing selector row
-const $chip = $('.topChip');
 
 //Accessing individual board pieces //=============> Play a piece no good <============\\
 const $circle = $('.circle');
@@ -95,12 +93,29 @@ function checkWinners() {
         const check3 = $($circle[winningArrays[y][2]])
         const check4 = $($circle[winningArrays[y][3]])
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
-            alert('Red wins!')
+            showResult('Red wins!')
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
-            alert('Black Wins!')
+            showResult('Black Wins!')
         }
     }
-// console.log($circle)
+// checkDraw()
+}
+
+//Check for a full board and alert a tie
+const checkDraw = () => {
+    for (let y = 0; y < 4; y++){
+        for (let x = 0; x < 4; x++){
+
+        }
+    }
+    
+}
+
+
+// Show results in a modal
+const showResult = (message) => {
+    $('#modal-text').text(message);
+    $('modal').css('display', 'flex')
 }
 
 // Event listener for the 'How To Play' button
