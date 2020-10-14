@@ -12,10 +12,10 @@ body {
     }
 
 h1 {
-    padding: 45px;
+    padding: 30px;
     text-align: center;
-    background-image: url(../images/connect4.jpeg);
-    background-repeat: space;
+    background-image: url(../images/BarConnect4.png);
+    background-repeat: no-repeat;
     background-position: center;
 }
 
