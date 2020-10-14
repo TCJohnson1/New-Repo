@@ -1,9 +1,5 @@
 body {
-    /* background-repeat: no-repeat;
-	background-attachment: fixed;
-    background-position: center; */
-    /* background-color: #166d3b;
-    background-image: linear-gradient( #16693a, #0c6332, #225337, #000000 90%); */
+    max-width: ;
     background-image: url(../images/BarConnect4.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
@@ -130,11 +126,11 @@ p {
 
 .black {
     background-color: black !important;
-    background-image: radial-gradient(darkslategrey, black);
+    background-image: radial-gradient(rgb(48, 67, 97), black);
 }
 
 .black:hover {
-    background-image: radial-gradient(black, darkslategrey);
+    background-image: radial-gradient(black, rgb(33, 49, 75));
 }
 
 .red {
