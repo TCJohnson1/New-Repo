@@ -1,9 +1,11 @@
 body {
-    background-color:darkolivegreen;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
 	background-attachment: fixed;
-    background-position: center;
-}
+    background-position: center; */
+    /* background-color: #166d3b;
+    background-image: linear-gradient( #16693a, #0c6332, #225337, #000000 90%); */
+    /* background-image: url(/Users/johnson/Projects/New-Repo/Project-1/images/4naRow.jpeg);
+    /* } */}
 
 h1 {
     padding: 20px;
@@ -63,7 +65,7 @@ p {
 
 .column>div {
     margin: 1px;
-    border: solid 3px yellow;
+    border: solid 3px gold;
     font-size: 35px;
     width: 65px;
     height: 65px;
@@ -76,9 +78,9 @@ p {
 }
 
 .gameBoard {
-    border: solid 3px yellow;
+    border: solid 3px gold;
     border-radius: 5%;
-    background-color: yellow;
+    background-image: linear-gradient(palegoldenrod, lightgoldenrodyellow, lightyellow, palegoldenrod);
     display: flex;
     flex-wrap: wrap;
     height: 450px;
@@ -93,6 +95,7 @@ p {
 .window-buttons {
     padding: 14px 18px;
     background-color: orangered;
+    background-image: linear-gradient( orangered,maroon);
     border: none;
     outline: none;
     border-radius: 3px;
@@ -102,21 +105,38 @@ p {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.window-buttons:hover {
+    background-color: rgba(212, 47, 18, 0.993);
+    background-image: linear-gradient(maroon, orangered)
+}
+
 .circle:hover {
     background-color: lightyellow;
+    background-image: radial-gradient(silver, lightyellow);
 }
 
 .circle {
     cursor: grab;
     border-radius: 50%;
+    /* background-image: linear-gradient(lightgrey, ); */
 }
 
 .black {
     background-color: black !important;
+    background-image: radial-gradient(darkslategrey, black);
+}
+
+.black:hover {
+    background-image: radial-gradient(black, darkslategrey);
 }
 
 .red {
     background-color: red !important;
+    background-image: radial-gradient(red, maroon);
+}
+
+.red:hover {
+    background-image: radial-gradient(maroon, red);
 }
 
 #modal {

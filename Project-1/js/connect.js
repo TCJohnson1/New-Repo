@@ -1,12 +1,14 @@
 $(() => {
 //Establishing variables
-
+console.log('test')
 //Accessing Game results
 const $resultsBox = $('#modal')
 const $results = $('#modal-text');
 
+// Establishing an end game scenario once a winner is revealed
 let gameInProgress = true
 
+// Set a move tracker that will announce a tie once 42 moves are hit
 let moveCounter = 0;
 
 //Accessing 'How To Play' button
@@ -40,7 +42,8 @@ const showResult = (message) => {
 }
 
 
-//
+//Sound animations
+
 
 //Event handler for refresh button  //====> not needed with HTML reset button <====\\
 // const refreshPage = () => {
@@ -125,15 +128,15 @@ function checkWinners() {
 // checkDraw()
 }
 
-//Check for a full board and alert a tie
-const checkDraw = () => {
-    for (let y = 0; y < 4; y++){
-        for (let x = 0; x < 4; x++){
+// //Check for a full board and alert a tie
+// const checkDraw = () => {
+//     for (let y = 0; y < 4; y++){
+//         for (let x = 0; x < 4; x++){
 
-        }
-    }
+//         }
+//     }
     
-}
+// }
 
 
 // Show results in a modal
