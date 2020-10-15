@@ -1,12 +1,16 @@
 $(() => {
 //Establishing variables
-console.log('test')
+// console.log('test')
 //Accessing Game results
-const $resultsBox = $('#modal')
+const $resultsBox = $('#modal');
 const $results = $('#modal-text');
 
+//Sound animations
+// var pieceSound = new Audio("../sound/music-low.m4a");
+// var winSound = new Audio("../sound/explode.m4a");
+
 // Establishing an end game scenario once a winner is revealed
-let gameInProgress = true
+let gameInProgress = true;
 
 // Set a move tracker that will announce a tie once 42 moves are hit
 let moveCounter = 0;
@@ -21,7 +25,7 @@ const $welcome = $('#welcome');
 const $closeBtn = $('#close');
 
 
-//Accessing individual board pieces //=============> Play a piece no good <============\\
+//Accessing individual board pieces 
 const $circle = $('.circle');
 
 // Event handler for pop up window
@@ -42,7 +46,6 @@ const showResult = (message) => {
 }
 
 
-//Sound animations
 
 
 //Event handler for refresh button  //====> not needed with HTML reset button <====\\
@@ -66,7 +69,7 @@ $circle.on('click', (e) => {
 
 //IDS NEED TO BE RENAMED TO MATCH THE INDEX IN CIRCLES. SO RENUMBER BY COLUMN
 const slide = (color, column) => {
-    console.log(color)
+    // console.log(color)
     if (gameInProgress === true){
         moveCounter++
     for (let i = 0; i < 6; i++) {
@@ -77,11 +80,11 @@ const slide = (color, column) => {
             $($circle[i + column * 6]).addClass(color)
             // toggle()
         } else {
-
         }
         
 
 }
+    // pieceSound.play()
     toggle()
 }
 }
@@ -115,10 +118,10 @@ function checkWinners() {
         const check4 = $($circle[winningArrays[y][3]])
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
             gameInProgress = false
-            showResult('Red Wins!')
+            showResult('Red Wins!')//.winSound();
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
             gameInProgress = false
-            showResult('Black Wins!');
+            showResult('Black Wins!')//.winSound();
         } else if (moveCounter === 42){
             showResult(`It's a Tie!`);
         }
