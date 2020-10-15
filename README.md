@@ -3,8 +3,6 @@ Connect Four Project
 
 Using JQuery variables were set to access each individual board piece, 
 
-![Clip of Game Board](https://github.com/TCJohnson1/New-Repo/blob/main/Project-1/images/GB.mp4)
-
 ![Image of Game Board](https://github.com/TCJohnson1/New-Repo/blob/main/Project-1/images/GameBoard.jpeg)
 
 
