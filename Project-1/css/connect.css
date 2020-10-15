@@ -2,7 +2,7 @@ body {
     background-image: url(../images/BarConnect4.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-position-y: 50%;
+    background-position-y: 900%;
     background-color: black
     }
 
@@ -169,4 +169,137 @@ p {
     padding: 25px 50px;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
+}
+#openWelcome {
+    margin: 0px;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: black;
+    }
+    .gameBoard {
+        height: 300px;
+        width: 375px;
+    }
+    .column>div {
+        width: 40px;
+        height: 40px;
+    }
+    #welcome {
+        height: 300px;
+        width: 400px
+    }
+    #welcome-text {
+        height: 200px;
+        width: 275px;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    h1 {
+        width: 220px;
+    }
+    .window-buttons {
+        width: 70px;
+        height: 45px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background-image: url(../images/BarConnect4.png);
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: -2000%;
+        background-color: black
+    }
+    .gameBoard {
+        height: 230px;
+        width: 280px;
+    }
+    .column>div {
+        width: 30px;
+        height: 30px;
+    }
+    #welcome {
+        height: 300px;
+        width: 280px
+    }
+    #welcome-text {
+        height: 200px;
+        width: 275px;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    h1 {
+        width: 220px;
+    }
+    .window-buttons {
+        width: 75px;
+        height: 35px;
+        font-size: 10px;
+        text-align: center;
+        padding: 0px 0px;
+    }
+    #modal {
+        height: 100px;
+        width: 275px;
+    }
+    #modal-text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    body {
+        background-image: url(../images/BarConnect4.png);
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: -2000%;
+        background-color: black
+    }
+    .gameBoard {
+        height: 230px;
+        width: 275px;
+    }
+    .column>div {
+        width: 30px;
+        height: 30px;
+    }
+    #welcome {
+        height: 300px;
+        width: 280px
+    }
+    #welcome-text {
+        height: 200px;
+        width: 260px;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    h1 {
+        width: 220px;
+    }
+    .window-buttons {
+        width: 70px;
+        height: 35px;
+        font-size: 10px;
+        text-align: center;
+        padding: 0px 0px;
+        
+    }
+    #modal {
+        height: 85px;
+        width: 245px;
+    }
+    #modal-text {
+        font-size: 15px;
+    }
+    #openWelcome {
+        margin: 0px;
+    }
 }
