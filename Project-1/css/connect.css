@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 900%;
-    background-color: black
+    background-color: #000000;
     }
 
 h1 {
@@ -143,7 +143,7 @@ p {
 
 #modal {
     background-color: #dcdcdc !important;
-    background-image: radial-gradient(gold,palegoldenrod, lightyellow, lightgoldenrodyellow, lightgrey);
+    background-image: radial-gradient(gold,palegoldenrod, lightyellow, lightgoldenrodyellow, lightgrey, darkgrey);    
     background-position: center;
     z-index: 2;
     display: flex;

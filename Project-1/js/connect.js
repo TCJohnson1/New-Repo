@@ -6,8 +6,8 @@ const $resultsBox = $('#modal');
 const $results = $('#modal-text');
 
 //Sound animations
-// var pieceSound = new Audio("../sound/music-low.m4a");
-// var winSound = new Audio("../sound/explode.m4a");
+// var pieceSound = new Audio("../sounds/music-low.mp3");
+// var winSound = new Audio("../sounds/explode.mp3");
 
 // Establishing an end game scenario once a winner is revealed
 let gameInProgress = true;
@@ -102,8 +102,8 @@ function playMove(event) {
         }   else {
             slide('red', Math.floor(columnNumber/6))
         }
+        // pieceSound.play();
         setTimeout(checkWinners(), 1000);
-        // console.log($move.attr('id'))
 }
 //Winning arrays need to be updated
 function checkWinners() {
@@ -118,10 +118,10 @@ function checkWinners() {
         const check4 = $($circle[winningArrays[y][3]])
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
             gameInProgress = false
-            showResult('Red Wins!')//.winSound();
+            showResult('Red Wins!')//.winSound.play();
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
             gameInProgress = false
-            showResult('Black Wins!')//.winSound();
+            showResult('Black Wins!')//.winSound.play();
         } else if (moveCounter === 42){
             showResult(`It's a Tie!`);
         }
@@ -162,7 +162,7 @@ $closeBtn.on('click', closeWelcome);
 /////////////////////////////////////////////////////////////////////////
 
 
-console.log($circle)
+// console.log($circle)
 
 });
 
