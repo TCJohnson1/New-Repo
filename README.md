@@ -1,5 +1,10 @@
 # New-Repo
 Connect Four Project
-../images/GameBoard.jpeg
 
-../images/HowToPlay.jpeg
+
+
+![Image of Game Board](../images/GameBoard.jpeg)
+
+
+
+![Image of How To Play](../images/HowToPlay.jpeg)
