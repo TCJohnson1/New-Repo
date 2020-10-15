@@ -115,7 +115,7 @@ function checkWinners() {
         const check4 = $($circle[winningArrays[y][3]])
         if (check1.hasClass('red') && check2.hasClass('red') && check3.hasClass('red') && check4.hasClass('red')) {
             gameInProgress = false
-            showResult('Red wins!')
+            showResult('Red Wins!')
         } else if (check1.hasClass('black') && check2.hasClass('black') && check3.hasClass('black') && check4.hasClass('black')) {
             gameInProgress = false
             showResult('Black Wins!');
