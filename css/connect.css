@@ -175,7 +175,7 @@ p {
     margin: 0px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     body {
         background-color: black;
     }
@@ -209,7 +209,7 @@ p {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
     body {
         background-image: url(../images/BarConnect4.png);
         background-repeat: no-repeat;
