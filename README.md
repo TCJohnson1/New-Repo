@@ -1,7 +1,9 @@
 # New-Repo
 Connect Four Project
+*Play:* https://tcjohnson1.github.io/New-Repo/
 
-Using JQuery variables were set to access each individual board piece, 
+This Connect Four game was built using JavaScript, HTML, CSS and JQuery.
+
 
 ![Image of Game Board](https://github.com/TCJohnson1/New-Repo/blob/main/images/GameBoard.jpeg)
 
@@ -13,4 +15,4 @@ How to play:
 Improvements:
 AI to make this a one or two player game.
 A tracker to show whose turn it is.
-Game sounds.
+Include game sounds.

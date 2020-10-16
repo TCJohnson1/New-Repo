@@ -9,10 +9,10 @@ const $results = $('#modal-text');
 // var pieceSound = new Audio("../sounds/music-low.mp3");
 // var winSound = new Audio("../sounds/explode.mp3");
 
-// Establishing an end game scenario once a winner is revealed
+// Establishing an end game scenario once a winner is revealed. Needed in slide function
 let gameInProgress = true;
 
-// Set a move tracker that will announce a tie once 42 moves are hit
+// Set a move tracker that will announce a tie once 42 moves are played
 let moveCounter = 0;
 
 //Accessing 'How To Play' button
@@ -91,7 +91,7 @@ const slide = (color, column) => {
 
 let choice = true
 function toggle(){
-    choice = choice ? false : true
+    choice = choice ? false : true //Shortcut to an if statement
     
 }
 
