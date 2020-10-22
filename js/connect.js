@@ -56,7 +56,7 @@ const showResult = (message) => {
 // }
 
 
-//Established a variable 'playMove' to play a move where clicked on the board. Set PLay move as an event.
+//Established a variable 'playMove' to play a move where clicked on the board. Set playMove as an event.
 $circle.on('click', (e) => {
     playMove(e)
 })
