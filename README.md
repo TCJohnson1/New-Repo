@@ -9,10 +9,5 @@ This Connect Four game was built using JavaScript, HTML, CSS and JQuery.
 
 
 
-How to play:
+How to play:<br/>
 ![Image of How To Play](https://github.com/TCJohnson1/New-Repo/blob/main/images/HowToPlay.jpeg)
-
-Improvements:
-AI to make this a one or two player game.
-A tracker to show whose turn it is.
-Include game sounds.
