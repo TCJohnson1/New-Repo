@@ -1,5 +1,5 @@
 # Connect Four
-## To Play: https://tcjohnson1.github.io/New-Repo/
+## To Play: [Connect Four](https://tcjohnson1.github.io/New-Repo/)
 
 ### This Connect Four game was built using JavaScript, HTML, CSS and JQuery.
 
